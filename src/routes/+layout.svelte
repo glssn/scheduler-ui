@@ -15,12 +15,10 @@
 
     try {
         if (response.ok) {
-            console.log('response ok')
             const content = await response.json()
             userData.set(content.user);
             authenticated.set(true)
         } else {
-            console.log('response not ok')
             authenticated.set(false)
             userData.set({})
         }
